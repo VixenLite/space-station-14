@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCE
+  name: Изолированные перчатки Старшего Инженера
+  description: Владелец этих перчаток может всё на станции, хоть сингулярность собрать, хоть бриг забаррикадировать
+  components:
+  - type: Sprite
+    sprite: Vixen\Clothing\Hands\Gloves\cegloves.rsi
+  - type: Clothing
+    sprite: Vixen\Clothing\Hands\Gloves\cegloves.rsi
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-white
+  - type: FingerprintMask
