@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformDressJumpsuitChiefEngineer
+  name: Парадная форма Главного Инженера
+  description: Дорогая парадная форма высшей должности инженерного отдела. Нанотрейзен посторалась, чтобы её владелец выделялся.
+  components:
+  - type: Sprite
+    sprite: Vixen\Uniforms\Jumpsuit\ceparad.rsi
+  - type: Clothing
+    sprite: Vixen\Uniforms\Jumpsuit\ceparad.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformTurtleneckChiefEngineer
+  name: Водолазка Старшего Инженера
+  description: Отличная водолазка из премиальных материалов. В ней удобно как постоянно ходить, так и работать.
+  components:
+  - type: Sprite
+    sprite: Vixen\Uniforms\Jumpsuit\cevodolazka.rsi
+  - type: Clothing
+    sprite: Vixen\Uniforms\Jumpsuit\cevodolazka.rsi

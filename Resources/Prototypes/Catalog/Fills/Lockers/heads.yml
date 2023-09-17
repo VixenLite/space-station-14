@@ -141,6 +141,8 @@
       - id: ClothingHeadHatBeretEngineering
       - id: ClothingShoesBootsMagAdv
       - id: ClothingHandsGlovesCE
+      - id: ClothingUniformDressJumpsuitChiefEngineer
+      - id: ClothingUniformTurtleneckChiefEngineer
       - id: CigarCase
         prob: 0.15
       - id: DoorRemoteEngineering
@@ -162,6 +164,8 @@
       - id: ClothingBeltChiefEngineerFilled
       - id: ClothingHeadHatBeretEngineering
       - id: ClothingHandsGlovesCE
+      - id: ClothingUniformDressJumpsuitChiefEngineer
+      - id: ClothingUniformTurtleneckChiefEngineer
       - id: CigarCase
         prob: 0.15
       - id: DoorRemoteEngineering
