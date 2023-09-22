@@ -16,6 +16,8 @@ public abstract class ClothingSystem : EntitySystem
 
     [ValidatePrototypeId<TagPrototype>]
     private const string HairTag = "HidesHair";
+    private const string EarsTag = "HidesEars";
+    private const string TailTag = "HidesTail";
 
     public override void Initialize()
     {
@@ -32,13 +34,31 @@ public abstract class ClothingSystem : EntitySystem
         component.InSlot = args.Slot;
         if (args.Slot == "head" && _tagSystem.HasTag(args.Equipment, HairTag))
             _humanoidSystem.SetLayerVisibility(args.Equipee, HumanoidVisualLayers.Hair, false);
+
+        component.InSlot = args.Slot;
+        if (args.Slot == "head" && _tagSystem.HasTag(args.Equipment, EarsTag))
+            _humanoidSystem.SetLayerVisibility(args.Equipee, HumanoidVisualLayers.HeadTop, false);
+
+        component.InSlot = args.Slot;
+        if (args.Slot == "outerClothing" && _tagSystem.HasTag(args.Equipment, TailTag))
+            _humanoidSystem.SetLayerVisibility(args.Equipee, HumanoidVisualLayers.Tail, false);
     }
 
-    protected virtual void OnGotUnequipped(EntityUid uid, ClothingComponent component, GotUnequippedEvent args)
+
+
+protected virtual void OnGotUnequipped(EntityUid uid, ClothingComponent component, GotUnequippedEvent args)
     {
         component.InSlot = null;
         if (args.Slot == "head" && _tagSystem.HasTag(args.Equipment, HairTag))
             _humanoidSystem.SetLayerVisibility(args.Equipee, HumanoidVisualLayers.Hair, true);
+
+        component.InSlot = null;
+        if (args.Slot == "head" && _tagSystem.HasTag(args.Equipment, EarsTag))
+            _humanoidSystem.SetLayerVisibility(args.Equipee, HumanoidVisualLayers.HeadTop, true);
+
+        component.InSlot = null;
+        if (args.Slot == "outerClothing" && _tagSystem.HasTag(args.Equipment, TailTag))
+            _humanoidSystem.SetLayerVisibility(args.Equipee, HumanoidVisualLayers.Tail, true);
     }
 
     private void OnGetState(EntityUid uid, ClothingComponent component, ref ComponentGetState args)

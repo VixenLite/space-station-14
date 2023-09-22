@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ClothingHeadHelmetMercTest
+  name: mercenary helmet
+  description: The combat helmet is commonly used by mercenaries, is strong, light and smells like gunpowder and the jungle.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/merc_helmet.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Helmets/merc_helmet.rsi
+  - type: Tag
+    tags:
+    - HidesEars
+    
+ 
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatLabCmoTest
+  name: chief medical officer's lab coat
+  description: Bluer than the standard model.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/labcoat_cmo.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/labcoat_cmo.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75   
+  - type: Tag
+    tags:
+    - HidesTail      
